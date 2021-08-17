@@ -6,41 +6,21 @@ namespace cp4
     {
         static void Main(string[] args)
         {
-            
-            calc();
+            int[] arr = { 4, 5, 6, 7, 8, 9,10 };
+            task2(arr);
         }
-        static void calc()
+        static void task2(int[] arr)
 
         {
-            Console.WriteLine("Ilk ededi daxil et : ");
-            int num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("ikinci  ededi daxil et : ");
-            int num2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("emeliyyati secin + ; - : * ; /");
-            string emeliyyat = Console.ReadLine();
+            int cem = 0;
 
-            if (emeliyyat == "+")
+            for (int i=0;i<arr.Length;i++)
             {
-                Console.WriteLine(num1+num2);
+                cem = cem + arr[i];
             }
-            else if (emeliyyat == "-")
-            {
-                Console.WriteLine(num1-num2);
-            }
-            else if (emeliyyat == "*")
-            {
-                Console.WriteLine(num1*num2);
-            }
-            else if (emeliyyat == "/")
-            {
-                Console.WriteLine(num1/num2);
-            }
-            else
-            {
-                Console.WriteLine("Duzgun emeliyyat daxil edin ");
-            }
-
-
+            double avarage;
+            avarage = cem / arr.Length;
+            Console.WriteLine(avarage);
 
         }
     }
